@@ -84,7 +84,7 @@ fprintf(' -3.6303\n  1.1664\n\n');
 
 % Plot the linear fit
 hold on; % keep previous plot visible
-plot(X(:,2), X*theta, 'm-')
+plot(X(:,2), X*theta, 'b-')
 legend('Training data', 'Linear regression')
 hold off % don't overlay any more plots on this figure
 
@@ -132,4 +132,4 @@ figure;
 contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))
 xlabel('\theta_0'); ylabel('\theta_1');
 hold on;
-plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
+plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2)
