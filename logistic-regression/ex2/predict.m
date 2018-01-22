@@ -14,14 +14,13 @@ p = zeros(m, 1);
 %               your learned logistic regression parameters. 
 %               You should set p to a vector of 0's and 1's
 %
+p = sigmoid(X * theta);
 
+% find indices for predict values lower or greater than the threshold 0.5
+gt_thresh = find(p >= 0.5);  
+lt_thresh = find(p < 0.5);
 
-
-
-
-
-
+p(gt_thresh) = 1;
+p(lt_thresh) = 0;
 % =========================================================================
-
-
 end
